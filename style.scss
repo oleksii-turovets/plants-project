@@ -265,7 +265,7 @@ header {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
     gap: 45px;
 
     background: linear-gradient(40deg, rgba(0, 115, 12, 0.81) -50%, rgba(255, 255, 255, 0) 100%);
@@ -278,13 +278,14 @@ header {
 
             img {
                 display: block;
-                max-width: 1013px;
+                // max-width: 1013px;
                 aspect-ratio: 375/240;
                 object-fit: cover;
             }
         }
     }
     .info-and-stats {
+        width: 100%;
         padding-left: 15px;
         padding-right: 15px;
 
@@ -569,20 +570,161 @@ header {
 /* tablet (sm)*/
 @media(min-width: 768px){
     .slider {
+        
+    
+        .slide {
+            
+
+            a {
+                img {
+                    max-height: 550px;
+                }
+            }
+        }
         .info-and-stats {
-            .statistics {  
+            padding-left: calc((100% - 720px) / 2 + 15px);
+            padding-right: calc((100% - 720px) / 2 + 15px);
+
+            .company-info {
+            
+                .sub-heading {
+                    
+                }
+    
+                .heading {
+                
+                }
+    
+                .description {
+                    
+                }
+    
+                .action {
+    
+                    .btn-quate {
+
+                    }
+    
+                    .btn-learn-more {
+                        
+                        a {
+                            color: $typo-clr-gray;
+    
+                            img {
+                                content: url(img/icons/slider/arrow-icon-left-gray.svg);
+                                height: 15px;
+                                padding-left: 15px;
+                            }
+                        }
+                        
+                    }
+    
+                }
+            }
+    
+            .statistics {
+    
+                .statistic {
+    
+                    .counter {
+                        
+                    }
+
+                    .statistic-name {
+                    
+                    }
+                }
                 .team {
                     display: flex;
                 }
             }
         }
-    }
+    
+        .flow-plant {
+            min-width: 80px;
+            max-width: 120px;
+            width: calc((100% - 720px)/2 - 15px);
+    
+            img{
+
+            }
+        }
+    } 
 }
 
 /* laptop-s (sm)*/
 @media(min-width: 992px){
+    .slider {
+        
+        .slide {
+            
+
+            a {
+                img {
+                    
+                }
+            }
+        }
+        .info-and-stats {
+            
+            .company-info {
+            
+                .sub-heading {
+                    
+                }
     
-   
+                .heading {
+                    
+                }
+    
+                .description {
+                    
+                }
+    
+                .action {
+                    
+    
+                    .btn-quate {
+                    
+                    }
+    
+                    .btn-learn-more {
+                        
+                        a {
+    
+                            img {
+                            
+                            }
+                        }
+                        
+                    }
+    
+                }
+            }
+    
+            .statistics {
+                
+    
+                .statistic {
+
+    
+                    .counter {
+                
+                    }
+
+                    .statistic-name {
+                        
+                    }
+                }
+            }
+        }
+    
+        .flow-plant {
+            img{
+                
+            }
+        }
+    }
 }
 
 /* laptop-m (md)*/
@@ -709,6 +851,79 @@ header {
         }
     }
 
+    .slider {
+        
+    
+        .slide {
+            
+
+            a {
+                img {
+                    
+                }
+            }
+        }
+        .info-and-stats {
+            padding-left: calc((100% - 970px) / 2 + 15px);
+            
+            .company-info {
+            
+                .sub-heading {
+                    
+                }
+    
+                .heading {
+                    
+                }
+    
+                .description {
+                    
+                }
+    
+                .action {
+                    
+    
+                    .btn-quate {
+                    
+                    }
+    
+                    .btn-learn-more {
+                        
+                        a {
+    
+                            img {
+                            
+                            }
+                        }
+                        
+                    }
+    
+                }
+            }
+    
+            .statistics {
+                
+    
+                .statistic {
+
+    
+                    .counter {
+                
+                    }
+
+                    .statistic-name {
+                        
+                    }
+                }
+            }
+        }
+    
+        .flow-plant {
+            img{
+                
+            }
+        }
+    }
 
     .services {
         margin-top: 100px;
@@ -767,7 +982,6 @@ header {
             }
         }
     }
-
 }
 
 /* laptop-l (lg)*/
@@ -787,54 +1001,45 @@ header {
             }
         }
     }
-    
-}
-
-/* desktop (xl)*/
-@media(min-width: 1600px){
 
     .slider {
         flex-direction: row-reverse;
-        // gap: 45px;
-
-        // height: 720px;
+        align-items: center;
         padding-top: 45px;
+
     
         .slide {
             max-width: 1013px;
 
             a {
                 img {
+                    max-height: none;
                     aspect-ratio: 1013/673;
                 }
             }
         }
         .info-and-stats {
-            padding-left: calc((100% - 1410px) / 2 );
+            width: auto;
+            padding-left: calc((100% - 1170px) / 2 + 15px);
+            padding-right: 15px;
             
             .company-info {
-                font-size: 18px;
             
                 .sub-heading {
-                    font-size: 16px;
                     text-transform: capitalize;
-
                     margin-bottom: 20px;
                 }
     
                 .heading {
                     font-weight: 800;
-                    font-size: 58px;
-                    line-height: 79px;
-
+                    font-size: 48px;
+                    line-height: 60px;
                     margin-bottom: 15px;
                 }
     
                 .description {
-                    line-height: 30px;
                     color: $typo-clr-gray;
-
-                    margin-bottom: 50px;
+                    margin-bottom: 35px;
                 }
     
                 .action {
@@ -845,15 +1050,11 @@ header {
                     .btn-quate {
                         width: 165px;
                         height: 50px;
-
-                        font-weight: 700;
-                        font-size: 18px;
                     }
     
                     .btn-learn-more {
                         
                         a {
-                            font-size: 18px;
                             color: $typo-clr-gray;
     
                             img {
@@ -869,12 +1070,11 @@ header {
             }
     
             .statistics {
-                font-size: 16px;
                 font-weight: 700;
 
                 justify-content: flex-start;
         
-                margin-top: 60px;
+                margin-top: 40px;
                 margin-bottom: 0px;
     
                 .statistic {
@@ -890,7 +1090,6 @@ header {
                     border-radius: 0px;
     
                     .counter {
-                        font-size: 15px;
                         height: 50px;
                         width: 50px;
                         line-height: 50px;
@@ -908,9 +1107,11 @@ header {
         }
     
         .flow-plant {
+            display: none;
             bottom: 60px;
             left: 0px;
-            width: calc((100% - 1410px)/2 - 55px);
+            width: calc((100% - 1170px)/2 - 55px);
+            max-width: none;
             max-height: 450px;
     
             img{
@@ -918,5 +1119,104 @@ header {
             }
         }
     }
+}
 
+/* flow-plant fix*/
+@media(min-width: 1310px){
+    .slider{
+        .flow-plant {
+            display: block;
+        }
+    }
+}
+
+/* desktop (xl)*/
+@media(min-width: 1600px){
+
+    .slider {
+    
+        .slide {
+
+            a {
+                img {
+                    
+                }
+            }
+        }
+        .info-and-stats {
+            padding-left: calc((100% - 1410px) / 2 + 15px );
+            
+            .company-info {
+                font-size: 18px;
+            
+                .sub-heading {
+                    font-size: 16px;
+                }
+    
+                .heading {
+                    font-size: 58px;
+                    line-height: 79px;
+                }
+    
+                .description {
+                    line-height: 30px;
+                    margin-bottom: 50px;
+                }
+    
+                .action {
+    
+                    .btn-quate {
+                        font-weight: 700;
+                        font-size: 18px;
+                    }
+    
+                    .btn-learn-more {
+                        
+                        a {
+                            font-size: 18px;
+                            img {
+                            
+                            }
+                        }
+                        
+                    }
+    
+                }
+            }
+    
+            .statistics {
+                font-size: 16px;
+                margin-top: 60px;
+    
+                .statistic {
+    
+                    .counter {
+                        font-size: 15px;
+                    }
+
+                    .statistic-name {
+                        width: 90px;
+                    }
+                }
+            }
+        }
+    
+        .flow-plant {
+            width: calc((100% - 1410px)/2 - 55px);
+            img {
+
+            }
+        }
+    }
+}
+
+/* slider text fix*/
+@media(min-width: 2500px){
+
+    .slider {
+    
+        .info-and-stats {
+            width: 100%;
+        }
+    }
 }

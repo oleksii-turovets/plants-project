@@ -418,7 +418,6 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 45px;
   background: linear-gradient(40deg, rgba(0, 115, 12, 0.81) -50%, rgba(255, 255, 255, 0) 100%);
 }
@@ -430,12 +429,12 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
 }
 .slider .slide a img {
   display: block;
-  max-width: 1013px;
   aspect-ratio: 375/240;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .slider .info-and-stats {
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -658,8 +657,28 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
 
 /* tablet (sm)*/
 @media (min-width: 768px) {
+  .slider .slide a img {
+    max-height: 550px;
+  }
+  .slider .info-and-stats {
+    padding-left: calc((100% - 720px) / 2 + 15px);
+    padding-right: calc((100% - 720px) / 2 + 15px);
+  }
+  .slider .info-and-stats .company-info .action .btn-learn-more a {
+    color: #676767;
+  }
+  .slider .info-and-stats .company-info .action .btn-learn-more a img {
+    content: url(img/icons/slider/arrow-icon-left-gray.svg);
+    height: 15px;
+    padding-left: 15px;
+  }
   .slider .info-and-stats .statistics .team {
     display: flex;
+  }
+  .slider .flow-plant {
+    min-width: 80px;
+    max-width: 120px;
+    width: calc((100% - 720px) / 2 - 15px);
   }
 }
 /* laptop-s (sm)*/
@@ -747,6 +766,9 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
     color: #212529;
     opacity: 1;
   }
+  .slider .info-and-stats {
+    padding-left: calc((100% - 970px) / 2 + 15px);
+  }
   .services {
     margin-top: 100px;
   }
@@ -802,40 +824,36 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
   header .main-header .nav-bar .nav-bar-options .nav .menu-1 {
     gap: 55px;
   }
-}
-/* desktop (xl)*/
-@media (min-width: 1600px) {
   .slider {
     flex-direction: row-reverse;
+    align-items: center;
     padding-top: 45px;
   }
   .slider .slide {
     max-width: 1013px;
   }
   .slider .slide a img {
+    max-height: none;
     aspect-ratio: 1013/673;
   }
   .slider .info-and-stats {
-    padding-left: calc((100% - 1410px) / 2);
-  }
-  .slider .info-and-stats .company-info {
-    font-size: 18px;
+    width: auto;
+    padding-left: calc((100% - 1170px) / 2 + 15px);
+    padding-right: 15px;
   }
   .slider .info-and-stats .company-info .sub-heading {
-    font-size: 16px;
     text-transform: capitalize;
     margin-bottom: 20px;
   }
   .slider .info-and-stats .company-info .heading {
     font-weight: 800;
-    font-size: 58px;
-    line-height: 79px;
+    font-size: 48px;
+    line-height: 60px;
     margin-bottom: 15px;
   }
   .slider .info-and-stats .company-info .description {
-    line-height: 30px;
     color: #676767;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
   }
   .slider .info-and-stats .company-info .action {
     flex-direction: row;
@@ -845,11 +863,8 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
   .slider .info-and-stats .company-info .action .btn-quate {
     width: 165px;
     height: 50px;
-    font-weight: 700;
-    font-size: 18px;
   }
   .slider .info-and-stats .company-info .action .btn-learn-more a {
-    font-size: 18px;
     color: #676767;
   }
   .slider .info-and-stats .company-info .action .btn-learn-more a img {
@@ -858,10 +873,9 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
     padding-left: 15px;
   }
   .slider .info-and-stats .statistics {
-    font-size: 16px;
     font-weight: 700;
     justify-content: flex-start;
-    margin-top: 60px;
+    margin-top: 40px;
     margin-bottom: 0px;
   }
   .slider .info-and-stats .statistics .statistic {
@@ -875,7 +889,6 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
     border-radius: 0px;
   }
   .slider .info-and-stats .statistics .statistic .counter {
-    font-size: 15px;
     height: 50px;
     width: 50px;
     line-height: 50px;
@@ -887,12 +900,66 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
     width: 90px;
   }
   .slider .flow-plant {
+    display: none;
     bottom: 60px;
     left: 0px;
-    width: calc((100% - 1410px) / 2 - 55px);
+    width: calc((100% - 1170px) / 2 - 55px);
+    max-width: none;
     max-height: 450px;
   }
   .slider .flow-plant img {
     max-width: 320px;
+  }
+}
+/* flow-plant fix*/
+@media (min-width: 1310px) {
+  .slider .flow-plant {
+    display: block;
+  }
+}
+/* desktop (xl)*/
+@media (min-width: 1600px) {
+  .slider .info-and-stats {
+    padding-left: calc((100% - 1410px) / 2 + 15px);
+  }
+  .slider .info-and-stats .company-info {
+    font-size: 18px;
+  }
+  .slider .info-and-stats .company-info .sub-heading {
+    font-size: 16px;
+  }
+  .slider .info-and-stats .company-info .heading {
+    font-size: 58px;
+    line-height: 79px;
+  }
+  .slider .info-and-stats .company-info .description {
+    line-height: 30px;
+    margin-bottom: 50px;
+  }
+  .slider .info-and-stats .company-info .action .btn-quate {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .slider .info-and-stats .company-info .action .btn-learn-more a {
+    font-size: 18px;
+  }
+  .slider .info-and-stats .statistics {
+    font-size: 16px;
+    margin-top: 60px;
+  }
+  .slider .info-and-stats .statistics .statistic .counter {
+    font-size: 15px;
+  }
+  .slider .info-and-stats .statistics .statistic .statistic-name {
+    width: 90px;
+  }
+  .slider .flow-plant {
+    width: calc((100% - 1410px) / 2 - 55px);
+  }
+}
+/* slider text fix*/
+@media (min-width: 2500px) {
+  .slider .info-and-stats {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
