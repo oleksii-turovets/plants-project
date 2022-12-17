@@ -1,4 +1,88 @@
 /* mobile (xs)*/
+a {
+  text-decoration: none;
+  color: #212529;
+}
+
+section {
+  margin-bottom: 50px;
+}
+section h2 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: capitalize;
+}
+section h2 span {
+  color: #00730C;
+}
+section p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #676767;
+}
+section h3 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: capitalize;
+}
+
+.card {
+  background: linear-gradient(172.29deg, #FFFFFF -10.79%, #FFFFFF 94.04%);
+  box-shadow: 2px 11px 30px rgba(51, 51, 51, 0.08);
+  border-radius: 10px;
+}
+
+.action-discover {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+.action-discover a {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: #00730C;
+  margin: 0 auto;
+}
+.action-discover a:hover {
+  color: #00730C;
+  background-color: #FFFFFF;
+  border: 1px solid #00730C;
+}
+
+/* laptop-m (md)*/
+@media (min-width: 1024px) {
+  section {
+    margin-bottom: 100px;
+  }
+  section h2 {
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 61px;
+    margin-bottom: 30px;
+  }
+  section p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  section h3 {
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
+/* mobile (xs)*/
 .container {
   width: 100%;
   padding-left: 15px;
@@ -551,25 +635,10 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
   margin-top: 50px;
   color: #212529;
 }
-.services h2 {
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 38px;
-  text-align: center;
-  text-transform: capitalize;
-  margin-bottom: 15px;
-}
-.services h2 span {
-  color: #00730C;
-}
 .services p {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
   text-align: center;
-  color: #676767;
 }
-.services > p {
+.services > .container > p {
   margin-bottom: 30px;
 }
 .services .services-list {
@@ -589,9 +658,6 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
   align-items: center;
   padding: 20px;
   gap: 20px;
-  background: linear-gradient(172.29deg, #FFFFFF -10.79%, #FFFFFF 94.04%);
-  box-shadow: 2px 11px 30px rgba(51, 51, 51, 0.08);
-  border-radius: 10px;
   background-image: url(img/icons/service/service-bg-plant-gray.svg);
   background-repeat: no-repeat;
   background-position: left;
@@ -608,10 +674,6 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
   gap: 10px;
 }
 .services .services-list .service a .service-text .service-name {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 22px;
-  text-transform: capitalize;
   color: #212529;
 }
 .services .services-list .service a .service-text .service-description {
@@ -655,6 +717,42 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
   color: #FFFFFF;
 }
 
+.experience .experience-img img {
+  display: block;
+  width: 100%;
+}
+.experience .experience-content > .row {
+  gap: 20px;
+}
+.experience .experience-content .text h2 {
+  text-transform: none;
+}
+.experience .experience-content .options > .row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.experience .experience-content .options .option {
+  padding: 10px;
+}
+.experience .experience-content .options .option a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 15px;
+  border-radius: 5px;
+}
+.experience .experience-content .options .option a .option-img {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 50%;
+  background: #00730C;
+}
+.experience .experience-content .options .option a .option-img img {
+  display: block;
+  width: 100%;
+}
 /* tablet (sm)*/
 @media (min-width: 768px) {
   .slider .slide a img {
@@ -772,17 +870,7 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
   .services {
     margin-top: 100px;
   }
-  .services h2 {
-    font-weight: 800;
-    font-size: 45px;
-    line-height: 61px;
-    margin-bottom: 30px;
-  }
-  .services p {
-    font-size: 18px;
-    line-height: 30px;
-  }
-  .services > p {
+  .services > .container > p {
     margin-bottom: 50px;
   }
   .services .services-list {
@@ -804,8 +892,6 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
   }
   .services .services-list .service a .service-text .service-name {
     text-align: center;
-    font-size: 24px;
-    line-height: 33px;
   }
   .services .services-list .service a .service-text .service-description {
     text-align: center;
