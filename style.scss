@@ -553,13 +553,56 @@ header {
     }
 }
 
-
 .experience{
+    >.container>.row{
+        gap: 30px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    [class *= "experience-" ]{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     .experience-img {
+        position: relative;
+        width: 100%;
+    
         img{
             display: block;
             width: 100%;
         }
+
+        .main-img{
+            position: relative;
+            width: 85%;
+            margin: 15px 0px 25% 15px;
+        }
+
+        .main-img::after {
+            content: "";
+            display: block;
+            background-color: $theme-clr-green;
+            position: absolute;
+            left: -15px;
+            top: -15px;
+            width: calc(100% - 115px + 15px);
+            height: calc(100% - 75px + 15px);
+            z-index: -1;
+        }
+
+        .sup-img{
+            // display: none;
+            width: 65%;
+            position: absolute;
+            right: 15px;
+            bottom: 0;
+            margin-left: auto;
+            margin-right: 0px;
+            border: 10px solid $bg-clr-white;
+            border-radius: 10px;
+        }
+
     }
     .experience-content {
         >.row{
@@ -608,6 +651,13 @@ header {
 
                     }
                 }
+                a:hover, a:focus {
+                    background: $theme-clr-green;
+                    color: $typo-clr-white;
+                    .option-img{
+                        border: 1px solid $bg-clr-white;
+                    }
+                }
             }
         }
 
@@ -616,6 +666,97 @@ header {
         }
     }
 }
+
+.why-choose-us {
+    // background: left -32% top -200% / contain no-repeat url(img/img/why-choose-us/bg-plant.png);     
+    background-color: $theme-clr-dark-green;
+    // background-repeat: no-repeat;
+    // background-position: left -32% top -200%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    >.container>.row{
+        gap: 30px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    [class *= "why-choose-us-" ]{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .why-choose-us-img {
+        width: 100%;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .why-choose-us-content {
+        color: $typo-clr-white;
+        >.row{
+            gap: 20px;
+        }
+        .text{
+            h2{
+                font-weight: 700;
+            }
+            p{
+                color: $typo-clr-white;
+                text-align: center;
+            }
+        }
+
+        .options {
+            max-width: 360px;
+            margin: 0 auto;
+            >.row{
+                margin-left: -10px;
+                margin-right: -10px;
+                align-items: center;
+            }
+            .option{
+                padding: 10px;
+                .card{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 10px;
+
+                    // padding: 15px;
+                    // border-radius: 5px;
+                    background: none;
+
+                    .option-img{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 20px;
+                        height: 20px;
+                        // padding: 5px;
+                        border-radius: 50%;
+                        filter: drop-shadow(1px 2px 10px rgba(0, 0, 0, 0.2));
+                        background: $bg-clr-white;
+                        
+                        img{
+                            display: block;
+                            width: 66.6666%;
+                        }
+                    }
+                    .option-name{
+
+                    }
+                }
+            }
+        }
+
+        .action {
+
+        }
+        
+    }
+}
+
 
 /* tablet (sm)*/
 @media(min-width: 768px){
@@ -1028,6 +1169,71 @@ header {
             }
         }
     }
+    
+    .experience{
+        
+        .experience-img {
+            margin-bottom: 0;
+            max-width: 720px;
+            margin: 0 auto;
+    
+            .main-img{
+                width: 89%;
+                margin: 35px 0px 20% 25px;
+            }
+    
+            .main-img::after {
+                left: -25px;
+                top: -35px;
+                width: calc(100% - 175px + 25px);
+                height: calc(100% - 75px + 35px);
+            }
+    
+            .sup-img{
+                border-width: 15px;
+            }
+    
+        }
+        .experience-content {
+            >.row{
+                gap: 35px;
+            }
+    
+            .options {
+                >.row{
+                    margin-left: -15px;
+                    margin-right: -15px;
+                }
+                .option{
+                    padding: 15px;
+                    a{
+                        flex-direction: row;
+                        gap: 30px;
+    
+                        padding: 15px 30px;
+    
+                        .option-img{
+                            width: 67px;
+                            height: 67px;
+                            padding: 8.5px;
+                        }
+                        .option-name {
+                            max-width: calc(100% - 67px - 30px);
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+
+    .why-choose-us {
+        .why-choose-us-content {
+            .options {
+                max-width: 480px;
+            }
+        }
+    }
 }
 
 /* laptop-l (lg)*/
@@ -1164,6 +1370,127 @@ header {
                 max-width: 320px;
             }
         }
+    }
+
+    .experience{
+        background: -6% 20% / 20% no-repeat url(img/img/experience/bg-leaf.png);
+        
+        >.container>.row{
+            gap: 0px;
+            align-items: center;
+        }
+        .experience-img {
+            max-width: none;
+            .main-img{
+                
+            }
+    
+            .main-img::after {
+            
+            }
+    
+            .sup-img{
+                
+            }
+    
+        }
+        .experience-content {
+            >.row{
+                
+            }
+    
+            .text {
+                h2{
+                
+                }
+                p{
+    
+                }
+            }
+    
+            .options {
+                >.row{  
+                }
+                .option{
+                    a{
+                        .option-img{
+                        }
+                        .option-name {
+                        }
+                    }
+                }
+            }
+    
+            .action {
+                .action-discover{
+                    margin-left: 0px;
+                }
+                
+            }
+        }
+    }
+
+    .why-choose-us {
+        // background-image: ;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    
+        >.container>.row{
+            gap: 0px;
+            align-items: center;
+            flex-direction: row-reverse;
+        }
+        
+        .why-choose-us-img {
+            padding-left: 40px;
+        }
+    
+        .why-choose-us-content {
+            padding-right: 40px;
+            >.row{
+                gap: 40px;
+            }
+            .text{
+                h2{
+                    text-align: left;
+                }
+                p{
+                    text-align: left;
+                }
+            }
+    
+            .options {
+                max-width: none;
+                >.row{
+                    
+                }
+                .option{
+                    
+                    .card{
+                        
+    
+                        .option-img{
+                            width: 30px;
+                            height: 30px;
+                            img{
+                            }
+                        }
+                        .option-name{
+
+                        }
+                    }
+                }
+            }
+    
+            .action {
+                .action-discover{
+                    margin-left: 0px;
+                }
+            }
+            
+        }
+    
+    
     }
 }
 

@@ -81,6 +81,11 @@ section h3 {
     font-size: 24px;
     line-height: 33px;
   }
+  .action-discover a {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 15px 35px;
+  }
 }
 /* mobile (xs)*/
 .container {
@@ -717,9 +722,48 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
   color: #FFFFFF;
 }
 
+.experience > .container > .row {
+  gap: 30px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.experience [class*=experience-] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.experience .experience-img {
+  position: relative;
+  width: 100%;
+}
 .experience .experience-img img {
   display: block;
   width: 100%;
+}
+.experience .experience-img .main-img {
+  position: relative;
+  width: 85%;
+  margin: 15px 0px 25% 15px;
+}
+.experience .experience-img .main-img::after {
+  content: "";
+  display: block;
+  background-color: #00730C;
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  width: calc(100% - 115px + 15px);
+  height: calc(100% - 75px + 15px);
+  z-index: -1;
+}
+.experience .experience-img .sup-img {
+  width: 65%;
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: 0px;
+  border: 10px solid #FFFFFF;
+  border-radius: 10px;
 }
 .experience .experience-content > .row {
   gap: 20px;
@@ -752,6 +796,80 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
 .experience .experience-content .options .option a .option-img img {
   display: block;
   width: 100%;
+}
+.experience .experience-content .options .option a:hover, .experience .experience-content .options .option a:focus {
+  background: #00730C;
+  color: #FFFFFF;
+}
+.experience .experience-content .options .option a:hover .option-img, .experience .experience-content .options .option a:focus .option-img {
+  border: 1px solid #FFFFFF;
+}
+.why-choose-us {
+  background-color: #0C4B35;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.why-choose-us > .container > .row {
+  gap: 30px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.why-choose-us [class*=why-choose-us-] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.why-choose-us .why-choose-us-img {
+  width: 100%;
+}
+.why-choose-us .why-choose-us-img img {
+  display: block;
+  width: 100%;
+}
+.why-choose-us .why-choose-us-content {
+  color: #FFFFFF;
+}
+.why-choose-us .why-choose-us-content > .row {
+  gap: 20px;
+}
+.why-choose-us .why-choose-us-content .text h2 {
+  font-weight: 700;
+}
+.why-choose-us .why-choose-us-content .text p {
+  color: #FFFFFF;
+  text-align: center;
+}
+.why-choose-us .why-choose-us-content .options {
+  max-width: 360px;
+  margin: 0 auto;
+}
+.why-choose-us .why-choose-us-content .options > .row {
+  margin-left: -10px;
+  margin-right: -10px;
+  align-items: center;
+}
+.why-choose-us .why-choose-us-content .options .option {
+  padding: 10px;
+}
+.why-choose-us .why-choose-us-content .options .option .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  background: none;
+}
+.why-choose-us .why-choose-us-content .options .option .card .option-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  filter: drop-shadow(1px 2px 10px rgba(0, 0, 0, 0.2));
+  background: #FFFFFF;
+}
+.why-choose-us .why-choose-us-content .options .option .card .option-img img {
+  display: block;
+  width: 66.6666%;
 }
 /* tablet (sm)*/
 @media (min-width: 768px) {
@@ -901,6 +1019,50 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
     background-position: 50% 10%;
     background-size: 50% auto;
   }
+  .experience .experience-img {
+    margin-bottom: 0;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .experience .experience-img .main-img {
+    width: 89%;
+    margin: 35px 0px 20% 25px;
+  }
+  .experience .experience-img .main-img::after {
+    left: -25px;
+    top: -35px;
+    width: calc(100% - 175px + 25px);
+    height: calc(100% - 75px + 35px);
+  }
+  .experience .experience-img .sup-img {
+    border-width: 15px;
+  }
+  .experience .experience-content > .row {
+    gap: 35px;
+  }
+  .experience .experience-content .options > .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .experience .experience-content .options .option {
+    padding: 15px;
+  }
+  .experience .experience-content .options .option a {
+    flex-direction: row;
+    gap: 30px;
+    padding: 15px 30px;
+  }
+  .experience .experience-content .options .option a .option-img {
+    width: 67px;
+    height: 67px;
+    padding: 8.5px;
+  }
+  .experience .experience-content .options .option a .option-name {
+    max-width: calc(100% - 67px - 30px);
+  }
+  .why-choose-us .why-choose-us-content .options {
+    max-width: 480px;
+  }
 }
 /* laptop-l (lg)*/
 @media (min-width: 1200px) {
@@ -995,6 +1157,53 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
   }
   .slider .flow-plant img {
     max-width: 320px;
+  }
+  .experience {
+    background: -6% 20%/20% no-repeat url(img/img/experience/bg-leaf.png);
+  }
+  .experience > .container > .row {
+    gap: 0px;
+    align-items: center;
+  }
+  .experience .experience-img {
+    max-width: none;
+  }
+  .experience .experience-content .action .action-discover {
+    margin-left: 0px;
+  }
+  .why-choose-us {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .why-choose-us > .container > .row {
+    gap: 0px;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .why-choose-us .why-choose-us-img {
+    padding-left: 40px;
+  }
+  .why-choose-us .why-choose-us-content {
+    padding-right: 40px;
+  }
+  .why-choose-us .why-choose-us-content > .row {
+    gap: 40px;
+  }
+  .why-choose-us .why-choose-us-content .text h2 {
+    text-align: left;
+  }
+  .why-choose-us .why-choose-us-content .text p {
+    text-align: left;
+  }
+  .why-choose-us .why-choose-us-content .options {
+    max-width: none;
+  }
+  .why-choose-us .why-choose-us-content .options .option .card .option-img {
+    width: 30px;
+    height: 30px;
+  }
+  .why-choose-us .why-choose-us-content .action .action-discover {
+    margin-left: 0px;
   }
 }
 /* flow-plant fix*/
