@@ -1,93 +1,4 @@
 /* mobile (xs)*/
-a {
-  text-decoration: none;
-  color: #212529;
-}
-
-section {
-  margin-bottom: 50px;
-}
-section h2 {
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 38px;
-  margin-bottom: 15px;
-  text-align: center;
-  text-transform: capitalize;
-}
-section h2 span {
-  color: #00730C;
-}
-section p {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
-  color: #676767;
-}
-section h3 {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 22px;
-  text-transform: capitalize;
-}
-
-.card {
-  background: linear-gradient(172.29deg, #FFFFFF -10.79%, #FFFFFF 94.04%);
-  box-shadow: 2px 11px 30px rgba(51, 51, 51, 0.08);
-  border-radius: 10px;
-}
-
-.action-discover {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-}
-.action-discover a {
-  display: block;
-  text-align: center;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: capitalize;
-  color: #FFFFFF;
-  padding: 10px 30px;
-  border-radius: 5px;
-  background-color: #00730C;
-  margin: 0 auto;
-}
-.action-discover a:hover {
-  color: #00730C;
-  background-color: #FFFFFF;
-  border: 1px solid #00730C;
-}
-
-/* laptop-m (md)*/
-@media (min-width: 1024px) {
-  section {
-    margin-bottom: 100px;
-  }
-  section h2 {
-    font-weight: 800;
-    font-size: 45px;
-    line-height: 61px;
-    margin-bottom: 30px;
-  }
-  section p {
-    font-size: 18px;
-    line-height: 30px;
-  }
-  section h3 {
-    font-size: 24px;
-    line-height: 33px;
-  }
-  .action-discover a {
-    font-size: 18px;
-    line-height: 24px;
-    padding: 15px 35px;
-  }
-}
-/* mobile (xs)*/
 .container {
   width: 100%;
   padding-left: 15px;
@@ -290,6 +201,95 @@ section h3 {
   }
 }
 /* mobile (xs)*/
+a {
+  text-decoration: none;
+  color: #212529;
+}
+
+section {
+  margin-bottom: 50px;
+}
+section h2 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: capitalize;
+}
+section h2 span {
+  color: #00730C;
+}
+section p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #676767;
+}
+section h3 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: capitalize;
+}
+
+.card {
+  background: linear-gradient(172.29deg, #FFFFFF -10.79%, #FFFFFF 94.04%);
+  box-shadow: 2px 11px 30px rgba(51, 51, 51, 0.08);
+  border-radius: 10px;
+}
+
+.action-discover {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+.action-discover a {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: #00730C;
+  margin: 0 auto;
+  border: 1px solid #00730C;
+}
+.action-discover a:hover {
+  color: #00730C;
+  background-color: #FFFFFF;
+}
+
+/* laptop-m (md)*/
+@media (min-width: 1024px) {
+  section {
+    margin-bottom: 100px;
+  }
+  section h2 {
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 61px;
+    margin-bottom: 30px;
+  }
+  section p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  section h3 {
+    font-size: 24px;
+    line-height: 33px;
+  }
+  .action-discover a {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 15px 35px;
+  }
+}
+/* mobile (xs)*/
 * {
   box-sizing: border-box;
 }
@@ -400,7 +400,7 @@ header .main-header .nav-bar .nav-bar-options .call-us button {
   height: 100%;
   width: 100%;
   background: #00730C;
-  border: none;
+  border: 1px solid #00730C;
   border-radius: 10px;
   color: #FFFFFF;
   font-family: "Nunito", sans-serif;
@@ -421,7 +421,6 @@ header .main-header .nav-bar .nav-bar-options .call-us button div {
 }
 header .main-header .nav-bar .nav-bar-options .call-us button:hover, header .main-header .nav-bar .nav-bar-options .call-us button:focus {
   background: #FFFFFF;
-  border: 1px solid #00730C;
   color: #00730C;
 }
 header .main-header .nav-bar .nav-bar-options .call-us button:hover img, header .main-header .nav-bar .nav-bar-options .call-us button:focus img {
@@ -805,7 +804,7 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
   border: 1px solid #FFFFFF;
 }
 .why-choose-us {
-  background-color: #0C4B35;
+  background: left -200px top 130px/310px no-repeat url(img/img/why-choose-us/bg-plant.png), right -120px top -90px/270px no-repeat url(img/img/why-choose-us/bg-plant.png), #0C4B35;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -871,6 +870,145 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
   display: block;
   width: 66.6666%;
 }
+.working-process > .container > .row {
+  gap: 30px;
+}
+.working-process .text p {
+  text-align: center;
+}
+.working-process .options > .row {
+  margin-left: -15px;
+  margin-right: -15px;
+  row-gap: 20px;
+  justify-content: center;
+}
+.working-process .options .option {
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+.working-process .options .option a {
+  padding: 20px;
+  display: block;
+  background: right 30px top 50%/76px no-repeat url(img/icons/working-process/bg-plant-default.svg);
+  position: relative;
+}
+.working-process .options .option a .option-img img {
+  display: block;
+  width: 50px;
+}
+.working-process .options .option a .option-text .option-name {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.working-process .options .option a::before {
+  content: "";
+  font-weight: 800;
+  font-size: 45px;
+  color: #E3E3E3;
+  position: absolute;
+  right: 30px;
+  top: 15px;
+}
+.working-process .options .option a:hover::before {
+  color: #FFFFFF;
+  text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.working-process .options .option a:hover {
+  background: right 30px top 50%/76px no-repeat url(img/icons/working-process/bg-plant-active.svg), #00730C;
+}
+.working-process .options .option a:hover .consultation-img img {
+  content: url(img/icons/working-process/consultation-active.svg);
+}
+.working-process .options .option a:hover .design-work-img img {
+  content: url(img/icons/working-process/design-active.svg);
+}
+.working-process .options .option a:hover .maintenance-img img {
+  content: url(img/icons/working-process/maintenance-active.svg);
+}
+.working-process .options .option a:hover .complete-img img {
+  content: url(img/icons/working-process/complete-active.svg);
+}
+.working-process .options .option a:hover .option-text {
+  color: #FFFFFF;
+}
+.working-process .options .option a:hover .option-text .option-description {
+  color: #FFFFFF;
+}
+.working-process .options .option.consultation > a::before {
+  content: "1";
+}
+.working-process .options .option.design-work > a::before {
+  content: "2";
+}
+.working-process .options .option.maintenance > a::before {
+  content: "3";
+}
+.working-process .options .option.complete > a::before {
+  content: "4";
+}
+
+.our-best-services .container > .row {
+  position: relative;
+}
+.our-best-services .our-best-services-img img {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+.our-best-services .our-best-services-content {
+  padding: 0 35px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.our-best-services .our-best-services-content h2 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin: 0px;
+}
+.our-best-services .our-best-services-content .call-us button {
+  padding: 10px 30px;
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 2px 11px 30px rgba(51, 51, 51, 0.08);
+  color: #00730C;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.our-best-services .our-best-services-content .call-us button img {
+  width: 20px;
+  display: block;
+}
+.our-best-services .our-best-services-content .call-us button:hover,
+.our-best-services .our-best-services-content .call-us button:focus {
+  background: #00730C;
+  color: #FFFFFF;
+  border: 1px solid #00730C;
+}
+.our-best-services .our-best-services-content .call-us button:hover img,
+.our-best-services .our-best-services-content .call-us button:focus img {
+  content: url(img/icons/navbar/icon-phone-call-white.svg);
+}
+
 /* tablet (sm)*/
 @media (min-width: 768px) {
   .slider .slide a img {
@@ -1063,6 +1201,56 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
   .why-choose-us .why-choose-us-content .options {
     max-width: 480px;
   }
+  .working-process > .container > .row {
+    gap: 50px;
+  }
+  .working-process .options .option a {
+    padding: 50px 30px 70px 30px;
+    display: block;
+    background: right 30px top 45%/110px no-repeat url(img/icons/working-process/bg-plant-default.svg);
+    position: relative;
+  }
+  .working-process .options .option a .option-img img {
+    width: 70px;
+  }
+  .working-process .options .option a .option-text .option-name {
+    margin-top: 35px;
+    margin-bottom: 20px;
+  }
+  .working-process .options .option a::before {
+    font-size: 78px;
+    right: 30px;
+    top: 50px;
+  }
+  .working-process .options .option a:hover {
+    background: right 30px top 45%/110px no-repeat url(img/icons/working-process/bg-plant-active.svg), #00730C;
+  }
+  .our-best-services .our-best-services-img img {
+    border-radius: 10px;
+    content: url(img/img/our-best-services/hand-holding-small-tree-planting-1.jpg);
+  }
+  .our-best-services .our-best-services-content {
+    width: 60%;
+    margin-right: 0;
+    margin-left: auto;
+    padding: 0 40px;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 40px;
+  }
+  .our-best-services .our-best-services-content h2 {
+    font-size: 33px;
+    line-height: 45px;
+    text-align: left;
+    margin: 0px;
+  }
+  .our-best-services .our-best-services-content .call-us button {
+    width: 170px;
+    font-size: 18px;
+  }
+  .our-best-services .our-best-services-content .call-us button img {
+    width: 30px;
+  }
 }
 /* laptop-l (lg)*/
 @media (min-width: 1200px) {
@@ -1172,6 +1360,7 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
     margin-left: 0px;
   }
   .why-choose-us {
+    background: left -330px top 120px/700px no-repeat url(img/img/why-choose-us/bg-plant.png), right -410px top -160px/750px no-repeat url(img/img/why-choose-us/bg-plant.png), #0C4B35;
     padding-top: 100px;
     padding-bottom: 100px;
   }
@@ -1204,6 +1393,10 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
   }
   .why-choose-us .why-choose-us-content .action .action-discover {
     margin-left: 0px;
+  }
+  .our-best-services .our-best-services-content {
+    padding: 0 60px;
+    gap: 85px;
   }
 }
 /* flow-plant fix*/
