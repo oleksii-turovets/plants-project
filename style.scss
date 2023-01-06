@@ -1293,7 +1293,8 @@ header {
             margin-right: -15px;
             justify-content: flex-start;
             align-items: stretch;
-            overflow: scroll;
+            // overflow: scroll;
+            overflow: hidden;
             flex-wrap: nowrap;
         }
 
@@ -2571,7 +2572,6 @@ header {
         }
     }
 
-
     .faq{
         .faq-content{
             width: 60%;
@@ -2581,14 +2581,14 @@ header {
             }
         }
         .faq-img{
-            align-self: flex-end;
+            // align-self: flex-end;
             display: block;
             width: 40%;
             max-width: 40%;
             padding-left: 60px;
             padding-right: 10px;
-            // padding-top: 50px;
-            padding-bottom: 5px;
+            padding-top: 100px;
+            // padding-bottom: 5px;
             img{
                 display: block;
                 width: 100%
@@ -2699,6 +2699,11 @@ header {
             .slider-bar {
                 display: none;
             }
+        }
+    }
+    .faq {
+        .faq-img {
+            padding-top: 50px;
         }
     }
 }
