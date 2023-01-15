@@ -353,6 +353,8 @@ header {
                     font-size: 16px;
                     line-height: 125%;
                     text-transform: capitalize;
+
+                    cursor: pointer;
                 }
 
                 .btn-learn-more {
@@ -1235,31 +1237,46 @@ header {
             .que{
                 margin-top: 20px;
                 .accordion {
+                    display: flex;
+                    position: relative;
                     font-weight: 600;
                     font-size: 14px;
                     line-height: 19px;
                     color: $typo-clr-black;
 
-                    padding: 12px 50px 12px 20px;
+                    padding: 12px 0px 12px 20px;
 
                     border-radius: 3px;
 
                     cursor: pointer;
                     transition: 0.1s ease-in-out;
 
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
 
                     background: right 20px top 50% / 20px 20px no-repeat url(img/icons/faq/plus-icon.svg),
                                 #FFF8F1;
+
+                    h5 {
+                        width: calc(100% - 52px);
+                        max-width: calc(100% - 52px);
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                }
+                .active-ellipsis::after{
+                    content: "?";
+                    height: 19px;
+                    padding-right: 50px;
+                    margin-left: -2px;
                 }
 
                 .active {
                     background-color: $theme-clr-green;
                     color: $typo-clr-white;
-                    white-space: normal;
                     background-image: url(img/icons/faq/minus-icon.svg);
+                    h5{
+                        white-space: normal;
+                    }
                 }
 
                 .panel {
@@ -2199,14 +2216,23 @@ header {
                         line-height: 33px;
                         text-transform: capitalize;
 
-                        padding: 13px 60px 13px 30px;
+                        padding: 13px 0px 13px 30px;
 
                         border-radius: 5px;
                         
                         background-position: right 30px top 50%;
                         background-size: 28px 28px;
-                    }
 
+                        h5 {
+                            width: calc(100% - 68px);
+                            max-width: calc(100% - 68px); 
+                        }
+                    }
+                    .active-ellipsis::after {
+                        height: 33px;
+                        padding-right: 65px;
+                        margin-left: -6px;
+                    }
                     .active {
                         background-image: url(img/icons/faq/cross-icon.svg);
                     }

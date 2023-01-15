@@ -581,6 +581,7 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
   font-size: 16px;
   line-height: 125%;
   text-transform: capitalize;
+  cursor: pointer;
 }
 .slider .info-and-stats .company-info .action .btn-learn-more a {
   display: flex;
@@ -1259,24 +1260,38 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
   margin-top: 20px;
 }
 .faq .faq-content .question-and-answer .que .accordion {
+  display: flex;
+  position: relative;
   font-weight: 600;
   font-size: 14px;
   line-height: 19px;
   color: #212529;
-  padding: 12px 50px 12px 20px;
+  padding: 12px 0px 12px 20px;
   border-radius: 3px;
   cursor: pointer;
   transition: 0.1s ease-in-out;
+  background: right 20px top 50%/20px 20px no-repeat url(img/icons/faq/plus-icon.svg), #FFF8F1;
+}
+.faq .faq-content .question-and-answer .que .accordion h5 {
+  width: calc(100% - 52px);
+  max-width: calc(100% - 52px);
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  background: right 20px top 50%/20px 20px no-repeat url(img/icons/faq/plus-icon.svg), #FFF8F1;
+}
+.faq .faq-content .question-and-answer .que .active-ellipsis::after {
+  content: "?";
+  height: 19px;
+  padding-right: 50px;
+  margin-left: -2px;
 }
 .faq .faq-content .question-and-answer .que .active {
   background-color: #00730C;
   color: #FFFFFF;
-  white-space: normal;
   background-image: url(img/icons/faq/minus-icon.svg);
+}
+.faq .faq-content .question-and-answer .que .active h5 {
+  white-space: normal;
 }
 .faq .faq-content .question-and-answer .que .panel {
   display: none;
@@ -1793,10 +1808,19 @@ header .main-header .nav-bar .nav-bar-options .nav .menu-1 a {
     font-size: 24px;
     line-height: 33px;
     text-transform: capitalize;
-    padding: 13px 60px 13px 30px;
+    padding: 13px 0px 13px 30px;
     border-radius: 5px;
     background-position: right 30px top 50%;
     background-size: 28px 28px;
+  }
+  .faq .faq-content .question-and-answer .que .accordion h5 {
+    width: calc(100% - 68px);
+    max-width: calc(100% - 68px);
+  }
+  .faq .faq-content .question-and-answer .que .active-ellipsis::after {
+    height: 33px;
+    padding-right: 65px;
+    margin-left: -6px;
   }
   .faq .faq-content .question-and-answer .que .active {
     background-image: url(img/icons/faq/cross-icon.svg);

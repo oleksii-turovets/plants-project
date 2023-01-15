@@ -1,13 +1,32 @@
 
 
 let accordions = document.querySelectorAll(".accordion");
-console.log(accordions);
+// console.log(accordions);
 
-accordions.forEach(item => 
-    item.addEventListener("click", function () {
-        item.classList.toggle("active");
+accordions.forEach(item => {
+    addQueMarkToEllipsis(item);
+  
+  window.addEventListener("resize", function () {
+      addQueMarkToEllipsis(item);
+  });
+    
+  item.addEventListener("click", function () {
+      item.classList.toggle("active");
+      let panel = item.nextElementSibling;
+      panel.classList.toggle("show");
+      addQueMarkToEllipsis(item);
+  })
+    
+});
 
-        let panel = item.nextElementSibling;
-        panel.classList.toggle("show");
-    })
-);
+function addQueMarkToEllipsis(item) {
+  let firstChild = item.firstElementChild;
+  if (
+    firstChild.offsetWidth < firstChild.scrollWidth &&
+    !item.classList.contains("active")
+  ) {
+    item.classList.add("active-ellipsis");
+  } else {
+    item.classList.remove("active-ellipsis");
+  }
+}
