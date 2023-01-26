@@ -302,6 +302,9 @@ footer a {
   font-size: 14px;
   line-height: 22px;
 }
+footer a:hover {
+  text-decoration: underline;
+}
 footer h5 {
   font-weight: 700;
   font-size: 18px;
